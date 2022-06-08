@@ -1,0 +1,12 @@
+---
+apiVersion: openfaas.com/v1
+kind: Function
+metadata:
+  name: marketing-list
+  namespace: openfaas-fn
+spec:
+  name: marketing-list
+  image: {{ .Values.marketingList.image }}
+  labels:
+    com.openfaas.scale.zero: "{{ .Values.scaleToZero.enable | toString }}"
+    com.openfaas.scale.zero-duration: "{{ .Values.scaleToZero.duration }}"
