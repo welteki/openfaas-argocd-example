@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: openfaas-functions
+  namespace: argocd
+spec:
+  destination:
+    server: {{ .Values.spec.destination.server }}
+  project: default
+  source:
+    path: chart/functions
+    repoURL: https://github.com/welteki/openfaas-argocd-example.git
+  syncPolicy:
+    automated:
+      selfHeal: true
