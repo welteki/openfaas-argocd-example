@@ -1,6 +1,9 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: marketingList=welteki/marketing-list:~0.1
+    argocd-image-updater.argoproj.io/marketingList.helm.image-spec: marketingList.image
   name: openfaas-functions
   namespace: argocd
 spec:
