@@ -12,6 +12,7 @@ spec:
   project: default
   source:
     path: chart/functions
+    targetRevision: remote
     repoURL: https://github.com/welteki/openfaas-argocd-example.git
   syncPolicy:
     automated:
