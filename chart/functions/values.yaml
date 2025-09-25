@@ -3,7 +3,7 @@ scaleToZero:
   duration: 15m
 
 marketingList:
-  image: welteki/marketing-list:0.1.0
+  image: welteki/marketing-list:0.1.1
 
 emailNotify:
-  image: welteki/email-notify:0.1.0
+  image: welteki/email-notify:0.1.1

@@ -4,12 +4,11 @@ provider:
   gateway: http://127.0.0.1:8080
 functions:
   marketing-list:
-    lang: node17
+    lang: node22
     handler: ./marketing-list
     image: ${REGISTRY:-docker.io}/${REPO:-welteki}/marketing-list:${TAG:-dev}
 
   email-notify:
-    lang: node17
+    lang: node22
     handler: ./email-notify
     image: ${REGISTRY:-docker.io}/${REPO:-welteki}/email-notify:${TAG:-dev}
-
