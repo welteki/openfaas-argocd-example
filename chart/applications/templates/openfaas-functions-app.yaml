@@ -8,7 +8,7 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    server: {{ .Values.spec.destination.server }}
+    server: "{{ .Values.spec.destination.server }}"
   project: default
   source:
     path: chart/functions

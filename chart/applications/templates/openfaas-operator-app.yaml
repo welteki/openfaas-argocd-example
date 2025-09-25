@@ -6,17 +6,21 @@ metadata:
 spec:
   destination:
     namespace: openfaas
-    server: {{ .Values.spec.destination.server }}
+    server: "{{ .Values.spec.destination.server }}"
   project: default
   source:
     helm:
       parameters:
-      - name: operator.create
-        value: "true"
-      - name: generateBasicAuth
-        value: "true"
-      - name: functionNamespace
-        value: openfaas-fn
+        - name: operator.create
+          value: "true"
+        - name: generateBasicAuth
+          value: "true"
+        - name: functionNamespace
+          value: openfaas-fn
+        - name: openfaasPro
+          value: true
+        - name: autoscaler.enabled
+          value: true
     path: chart/openfaas
     repoURL: https://github.com/openfaas/faas-netes.git
   syncPolicy:
