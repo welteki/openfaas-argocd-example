@@ -13,3 +13,6 @@ nodeInfo:
 
 sleep:
   image: ghcr.io/openfaas/sleep:latest
+
+env:
+  image: ghcr.io/openfaas/alpine:latest
