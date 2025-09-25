@@ -4,7 +4,7 @@ metadata:
   annotations:
     argocd-image-updater.argoproj.io/image-list: marketingList=welteki/marketing-list:~0.1
     argocd-image-updater.argoproj.io/marketingList.helm.image-spec: marketingList.image
-  name: openfaas-functions
+  name: openfaas-functions{{ if .Values.appNameSuffix }}-{{ .Values.appNameSuffix }}{{ end }}
   namespace: argocd
 spec:
   destination:

@@ -1,3 +1,4 @@
+appNameSuffix: ""
 spec:
   destination:
     server: https://kubernetes-n200.alexellis:6443

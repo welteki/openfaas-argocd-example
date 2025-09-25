@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: openfaas-operator
+  name: openfaas-operator{{ if .Values.appNameSuffix }}-{{ .Values.appNameSuffix }}{{ end }}
   namespace: argocd
 spec:
   destination:
