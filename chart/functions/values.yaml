@@ -1,5 +1,5 @@
 scaleToZero:
-  enable: "false"
+  enable: "true"
   duration: 15m
 
 marketingList:
@@ -7,3 +7,9 @@ marketingList:
 
 emailNotify:
   image: welteki/email-notify:0.1.1
+
+nodeInfo:
+  image: ghcr.io/openfaas/nodeinfo:latest
+
+sleep:
+  image: ghcr.io/openfaas/sleep:latest
