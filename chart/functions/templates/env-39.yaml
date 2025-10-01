@@ -1,0 +1,14 @@
+---
+apiVersion: openfaas.com/v1
+kind: Function
+metadata:
+  name: env-39
+  namespace: openfaas-fn
+spec:
+  name: env-39
+  image: "{{ .Values.env.image }}"
+  environment:
+    fprocess: env
+  labels:
+    com.openfaas.scale.zero: "{{ .Values.scaleToZero.enable | toString }}"
+    com.openfaas.scale.zero-duration: "{{ .Values.scaleToZero.duration }}"
