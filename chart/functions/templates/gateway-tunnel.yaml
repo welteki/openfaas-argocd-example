@@ -24,3 +24,4 @@ spec:
             - "--url=wss://uplink.welteki.dev/alexellis/openfaas-gateway"
             - "--token=ADyycO08NjJnQ7w7JuT3naLtmchZCRhKHULGucHhDf0ikpYHQbG4Yedfw2"
             - "--upstream=8080=gateway.openfaas:8080"
+            - "--demux"
